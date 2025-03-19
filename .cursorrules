@@ -1,0 +1,120 @@
+{
+  "editor": {
+    "formatOnSave": true,
+    "tabSize": 2,
+    "insertSpaces": true,
+    "rulers": [80, 100],
+    "wordWrap": "on",
+    "trimTrailingWhitespace": true,
+    "insertFinalNewline": true,
+    "trimFinalNewlines": true
+  },
+  "typescript": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es2022",
+    "module": "esnext"
+  },
+  "react": {
+    "jsxSingleQuote": false,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "es5",
+    "printWidth": 100,
+    "endOfLine": "auto"
+  },
+  "testing": {
+    "jest": {
+      "testEnvironment": "jsdom",
+      "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"],
+      "moduleNameMapper": {
+        "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+      },
+      "collectCoverageFrom": [
+        "src/**/*.{js,jsx,ts,tsx}",
+        "!src/**/*.d.ts",
+        "!src/index.tsx",
+        "!src/reportWebVitals.ts",
+        "!src/setupTests.ts"
+      ],
+      "coverageThreshold": {
+        "global": {
+          "branches": 80,
+          "functions": 80,
+          "lines": 80,
+          "statements": 80
+        }
+      }
+    },
+    "cypress": {
+      "video": true,
+      "screenshotOnRunFailure": true,
+      "defaultCommandTimeout": 10000,
+      "viewportWidth": 1280,
+      "viewportHeight": 720
+    }
+  },
+  "linting": {
+    "eslint": {
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:testing-library/react"
+      ],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+        "no-console": ["warn", { "allow": ["warn", "error"] }]
+      }
+    },
+    "prettier": {
+      "singleQuote": true,
+      "trailingComma": "es5",
+      "printWidth": 100,
+      "tabWidth": 2,
+      "semi": true
+    }
+  },
+  "accessibility": {
+    "aria": true,
+    "semanticHTML": true,
+    "colorContrast": true,
+    "keyboardNavigation": true,
+    "screenReader": true
+  },
+  "performance": {
+    "codeSplitting": true,
+    "lazyLoading": true,
+    "imageOptimization": true,
+    "bundleAnalysis": true
+  },
+  "git": {
+    "conventionalCommits": true,
+    "commitLint": true,
+    "husky": true,
+    "lintStaged": true
+  }
+} 
